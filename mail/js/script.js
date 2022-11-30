@@ -6,7 +6,7 @@ const button = document.getElementById ('get_value');
 const reset = document.getElementById ('reset')
 
 button.addEventListener ('click', function(){
-    
+
     user_mail = document.getElementById('mail_user').value;
     console.log("Mail utente: " + user_mail);
 
@@ -20,10 +20,10 @@ button.addEventListener ('click', function(){
     console.log("Esito controllo accesso: " + access)
     
     if (access) {
-        document.getElementById ('output').innerHTML = "PUOI ACCEDERE";
+        document.getElementById ('output').innerHTML = "Benvenuto!";
     }
     else {
-        document.getElementById ('output').innerHTML = "NON PUOI ACCEDERE";
+        document.getElementById ('output').innerHTML = "Inserire una mail valida!";
     }
 
     
@@ -32,4 +32,5 @@ button.addEventListener ('click', function(){
 reset.addEventListener ('click', function(){
     document.getElementById("form_mail").reset();
     document.getElementById ('output').innerHTML = "";
+    access = false;
 })
